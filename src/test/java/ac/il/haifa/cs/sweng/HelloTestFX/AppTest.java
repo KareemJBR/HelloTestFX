@@ -2,6 +2,9 @@ package ac.il.haifa.cs.sweng.HelloTestFX;
 
 import java.io.IOException;
 
+import javafx.scene.control.TextInputControl;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.api.FxAssert;
@@ -44,7 +47,6 @@ public class AppTest {
 	@Test
 	void test_button_click(FxRobot robot) {
 		robot.clickOn(".button");
-		
 		FxAssert.verifyThat("#textField", TextInputControlMatchers.hasText("Hello World"));
 	}
 
